@@ -1,0 +1,177 @@
+.project-detail__back {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-2);
+  font-size: var(--fs-sm);
+  color: var(--text-secondary);
+  margin-bottom: var(--sp-4);
+}
+
+.project-detail__back:hover {
+  color: var(--accent-blue);
+  text-decoration: none;
+}
+
+.project-detail__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: var(--sp-6);
+  gap: var(--sp-4);
+  flex-wrap: wrap;
+}
+
+.project-detail__header h1 {
+  font-size: var(--fs-xl);
+  font-weight: var(--fw-bold);
+  margin-bottom: var(--sp-1);
+}
+
+.project-detail__info-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--sp-3);
+  margin-bottom: var(--sp-6);
+}
+
+.project-detail__info {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-3);
+  padding: var(--sp-4);
+}
+
+.project-detail__section {
+  margin-bottom: var(--sp-6);
+}
+
+.project-detail__section h2 {
+  font-size: var(--fs-md);
+  font-weight: var(--fw-semibold);
+  margin-bottom: var(--sp-4);
+}
+
+/* Gantt */
+.gantt {
+  display: flex;
+  gap: var(--sp-3);
+  background: var(--bg-secondary);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-lg);
+  padding: var(--sp-4);
+  overflow-x: auto;
+}
+
+.gantt__labels {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-2);
+  min-width: 160px;
+}
+
+.gantt__label {
+  height: 32px;
+  display: flex;
+  align-items: center;
+  color: var(--text-secondary);
+  white-space: nowrap;
+}
+
+.gantt__chart {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-2);
+  min-width: 400px;
+}
+
+.gantt__row {
+  height: 32px;
+  position: relative;
+  background: var(--bg-surface);
+  border-radius: var(--radius-sm);
+}
+
+.gantt__bar {
+  position: absolute;
+  top: 2px;
+  height: 28px;
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  min-width: 40px;
+}
+
+.gantt__bar-fill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background: white;
+}
+
+.gantt__bar-text {
+  position: relative;
+  z-index: 1;
+  padding: 0 var(--sp-2);
+  font-size: 10px;
+  font-weight: var(--fw-semibold);
+  color: white;
+}
+
+/* Milestones */
+.project-detail__milestones {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-3);
+}
+
+.milestone-card {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-4);
+  padding: var(--sp-4);
+}
+
+.milestone-card__info {
+  flex: 1;
+}
+
+.milestone-card__info h4 {
+  font-size: var(--fs-base);
+  font-weight: var(--fw-medium);
+}
+
+.milestone-card__progress {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-2);
+  min-width: 120px;
+}
+
+.milestone-card__progress-bar {
+  flex: 1;
+  height: 4px;
+  background: var(--bg-hover);
+  border-radius: var(--radius-pill);
+  overflow: hidden;
+}
+
+.milestone-card__progress-fill {
+  height: 100%;
+  background: var(--accent-blue);
+  border-radius: var(--radius-pill);
+}
+
+@media (max-width: 1023px) {
+  .project-detail__info-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 767px) {
+  .project-detail__info-grid {
+    grid-template-columns: 1fr;
+  }
+}

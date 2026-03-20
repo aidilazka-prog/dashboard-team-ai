@@ -1,0 +1,23 @@
+.app-shell {
+  min-height: 100vh;
+}
+
+.app-shell__main {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  transition: margin-left var(--transition-normal);
+}
+
+.app-shell__content {
+  flex: 1;
+  padding: var(--sp-6);
+  overflow-y: auto;
+}
+
+@media (max-width: 767px) {
+  .app-shell__content {
+    padding: var(--sp-4);
+    padding-bottom: calc(var(--mobile-tab-height) + var(--sp-4));
+  }
+}

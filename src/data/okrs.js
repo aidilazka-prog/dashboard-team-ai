@@ -1,0 +1,45 @@
+export const OKRS = [
+  {
+    id: 'okr1',
+    objective: 'Launch MVP of AI Team Dashboard',
+    owner: 'u1',
+    period: 'Q1 2026',
+    progress: 58,
+    status: 'on-track',
+    aiProbability: 72,
+    keyResults: [
+      { id: 'kr1', title: 'Complete core Kanban module with drag-drop', target: 100, current: 85, unit: '%', linkedTasks: ['t4', 't6'] },
+      { id: 'kr2', title: 'Ship user authentication flow', target: 100, current: 70, unit: '%', linkedTasks: ['t3'] },
+      { id: 'kr3', title: 'Deploy CI/CD pipeline', target: 100, current: 35, unit: '%', linkedTasks: ['t2'] },
+      { id: 'kr4', title: 'Achieve 90% test coverage on critical paths', target: 90, current: 42, unit: '%', linkedTasks: [] },
+    ],
+  },
+  {
+    id: 'okr2',
+    objective: 'Improve team collaboration efficiency',
+    owner: 'u1',
+    period: 'Q1 2026',
+    progress: 40,
+    status: 'at-risk',
+    aiProbability: 55,
+    keyResults: [
+      { id: 'kr5', title: 'Reduce meeting time by 30%', target: 30, current: 12, unit: '%', linkedTasks: ['t7'] },
+      { id: 'kr6', title: 'Auto-generate 80% of meeting action items', target: 80, current: 0, unit: '%', linkedTasks: ['t7'] },
+      { id: 'kr7', title: 'Achieve 4.5/5 team satisfaction score', target: 4.5, current: 4.1, unit: '/5', linkedTasks: [] },
+    ],
+  },
+  {
+    id: 'okr3',
+    objective: 'Deliver client portal redesign on time',
+    owner: 'u4',
+    period: 'Q1 2026',
+    progress: 75,
+    status: 'on-track',
+    aiProbability: 85,
+    keyResults: [
+      { id: 'kr8', title: 'Complete all design mockups', target: 100, current: 100, unit: '%', linkedTasks: ['t1'] },
+      { id: 'kr9', title: 'Implement responsive layouts', target: 100, current: 60, unit: '%', linkedTasks: ['t6', 't9'] },
+      { id: 'kr10', title: 'Pass UAT with <5 critical bugs', target: 5, current: 2, unit: 'bugs', linkedTasks: [] },
+    ],
+  },
+];
