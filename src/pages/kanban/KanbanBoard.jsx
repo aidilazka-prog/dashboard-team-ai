@@ -43,6 +43,23 @@ export default function KanbanBoard() {
 
   const getColumnTasks = (columnId) => tasks.filter(t => t.column === columnId);
 
+  const handleAddTask = () => {
+    const newTask = {
+      id: `t${Date.now()}`,
+      title: 'New Task',
+      description: 'Click to edit description',
+      column: 'todo',
+      priority: 'medium',
+      assignee: 'u2',
+      tags: ['new'],
+      subtasks: 0,
+      subtasksDone: 0,
+      dueDate: new Date().toISOString().split('T')[0],
+      aiGenerated: false,
+    };
+    setTasks(prev => [...prev, newTask]);
+  };
+
   return (
     <div className="kanban">
       <div className="kanban__header animate-slide-up">
@@ -74,7 +91,7 @@ export default function KanbanBoard() {
           <button className="btn btn-ai">
             <Sparkles size={15} /> AI Create Task
           </button>
-          <button className="btn btn-primary">
+          <button className="btn btn-primary" onClick={handleAddTask}>
             <Plus size={15} /> Add Task
           </button>
         </div>
